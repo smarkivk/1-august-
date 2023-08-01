@@ -1,0 +1,60 @@
+public class Car {
+    // Instance variables
+    private String make;
+    private String model;
+    private int year;
+
+    // Constructor
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Getter methods
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    // Setter methods
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    // Main method to test the Car class
+    public static void main(String[] args) {
+        // Create a Car object using the constructor
+        Car myCar = new Car("Toyota", "Camry", 2022);
+
+        // Access and print the car details using getter methods
+        System.out.println("Make: " + myCar.getMake());
+        System.out.println("Model: " + myCar.getModel());
+        System.out.println("Year: " + myCar.getYear());
+
+        // Update the car details using setter methods
+        myCar.setMake("Honda");
+        myCar.setModel("Accord");
+        myCar.setYear(2021);
+
+        // Print the updated car details
+        System.out.println("\nUpdated Make: " + myCar.getMake());
+        System.out.println("Updated Model: " + myCar.getModel());
+        System.out.println("Updated Year: " + myCar.getYear());
+    }
+}
