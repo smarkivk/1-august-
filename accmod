@@ -1,0 +1,55 @@
+// MyClass.java
+
+// A simple class with public and private access modifiers
+class MyClass {
+    // Private instance variable
+    private int privateNumber;
+
+    // Public constructor
+    public MyClass() {
+        privateNumber = 0;
+    }
+
+    // Public method to set the privateNumber
+    public void setPrivateNumber(int number) {
+        privateNumber = number;
+    }
+
+    // Public method to get the privateNumber
+    public int getPrivateNumber() {
+        return privateNumber;
+    }
+
+    // Private method
+    private void privateMethod() {
+        System.out.println("This is a private method.");
+    }
+
+    // Public method that calls the private method
+    public void publicMethod() {
+        System.out.println("This is a public method.");
+        privateMethod(); // Accessing private method within the class
+    }
+
+    // Public static method
+    public static void staticMethod() {
+        System.out.println("This is a public static method.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object of MyClass
+        MyClass myObj = new MyClass();
+
+        // Using public methods to interact with private instance variable
+        myObj.setPrivateNumber(42);
+        System.out.println("Private Number: " + myObj.getPrivateNumber());
+
+        // Calling public method
+        myObj.publicMethod();
+
+        // Calling public static method
+        MyClass.staticMethod();
+    }
+}
